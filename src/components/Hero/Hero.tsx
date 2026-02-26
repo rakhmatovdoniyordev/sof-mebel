@@ -2,13 +2,13 @@ import { MdSearch } from "react-icons/md";
 import heroImg from "../../assets/images/hero.jpg";
 
 const Hero = () => {
-    function handleSearch(event: React.FormEvent<HTMLFormElement>) {
-        event.preventDefault();
-      }
+  function handleSearch(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+  }
   return (
     <section id="hero" className="pb-10 pt-20">
       <div className="container mx-auto">
-        <div className="mt-6 flex items-center gap-4 bg-[#f8efd3] px-6 pb-10 pt-6 rounded-2xl shadow-[0px_10px_20px_rgba(46,73,54,0.50)] max-[1284px]:flex-col">
+        <div className="mt-6 flex items-center gap-4 bg-[#f8efd3] px-4 md:px-6 pb-10 pt-6 rounded-2xl shadow-[0px_10px_20px_rgba(46,73,54,0.50)] max-[1284px]:flex-col">
           <div data-aos="fade-right" className="flex-1 flex flex-col gap-4">
             <h1 className="font-asosiy text-main font-bold text-5xl max-[478px]:text-3xl">
               Zamonaviy hayot uchun qulay va nafis mebellar
@@ -23,7 +23,10 @@ const Hero = () => {
               yanada go'zal va qulay qilish uchun eng yaxshi mebellarni
               tanlashingiz mumkin.
             </p>
-            <form className="flex flex-col md:flex-row items-center gap-4 mt-8 max-[650px]:mt-4 max-[478px]:mt-2 max-[1284px]:justify-center" onSubmit={handleSearch}>
+            <form
+              className="flex flex-col md:flex-row items-center gap-4 mt-8 max-[650px]:mt-4 max-[478px]:mt-2 max-[1284px]:justify-center"
+              onSubmit={handleSearch}
+            >
               <input
                 type="text"
                 placeholder="Qidiruv..."
@@ -59,7 +62,7 @@ const Hero = () => {
                 flex items-center gap-2
                 "
               >
-                Qidirish <MdSearch className="text-xl"/>
+                Qidirish <MdSearch className="text-xl" />
               </button>
             </form>
             <div className="flex items-center gap-8 mt-4 font-asosiy max-[620px]:gap-4 justify-center max-[485px]:flex-col max-[485px]:gap-1 max-[650px]:mt-0">
@@ -78,7 +81,7 @@ const Hero = () => {
             </div>
           </div>
           <div data-aos="fade-left" className="flex-1">
-            <div className="w-full h-full flex items-center max-[1280px]:justify-center justify-end pr-10 max-[1280px]:pr-0 rounded-2xl">
+            <div className="w-full h-full flex items-center max-[1280px]:justify-center justify-end pr-0 md:pr-10 rounded-2xl">
               <img
                 src={heroImg}
                 alt="Hero Furniture Image"

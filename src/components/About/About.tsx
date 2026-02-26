@@ -1,31 +1,31 @@
-import { FaPalette, FaStar } from 'react-icons/fa'
-import { ImTruck } from 'react-icons/im'
-import type { Feature } from '../../types'
+import { FaPalette, FaStar } from "react-icons/fa";
+import { ImTruck } from "react-icons/im";
+import type { Feature } from "../../types";
 
 const features: Feature[] = [
   {
     id: 1,
-    title: 'Yuqori sifat',
-    icon: <FaStar/>,
-    style: 'text-yellow-400'
+    title: "Yuqori sifat",
+    icon: <FaStar />,
+    style: "text-yellow-400",
   },
   {
     id: 2,
-    title: 'Individual dizayn',
-    icon: <FaPalette/>,
-    style: 'text-green-500'
+    title: "Individual dizayn",
+    icon: <FaPalette />,
+    style: "text-green-500",
   },
   {
     id: 3,
-    title: 'Tez yetkazib berish',
-    icon: <ImTruck/>,
-    style: 'text-blue-500'
+    title: "Tez yetkazib berish",
+    icon: <ImTruck />,
+    style: "text-blue-500",
   },
-]
+];
 
 export default function About() {
   return (
-    <section className="py-12 bg-white/40 pb-20">
+    <section className="py-12 bg-white/40 pb-20 overflow-hidden">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div data-aos="fade-right" className="space-y-8 animate-fade-in">
@@ -39,7 +39,10 @@ export default function About() {
                 Har bir uy uchun nafis yechim
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed max-w-md">
-                Biz mijozlarımızda sifatli, zamonaviy va uzunasiga xizmat qiladigan mebelllarni taklif qilamiz. Har bir buyurtma interyer uslubingizga mos rang, o'lcham va kompozitsiya bilan tayyorlandi.
+                Biz mijozlarımızda sifatli, zamonaviy va uzunasiga xizmat
+                qiladigan mebelllarni taklif qilamiz. Har bir buyurtma interyer
+                uslubingizga mos rang, o'lcham va kompozitsiya bilan
+                tayyorlandi.
               </p>
             </div>
             <div className="space-y-4 pt-4">
@@ -48,7 +51,9 @@ export default function About() {
                   key={feature.id}
                   className="group w-full md:w-auto inline-flex items-center gap-3 px-6 py-3 rounded-full border-2 border-gray-200 bg-white text-gray-900 font-medium transition-all duration-300 ease-out hover:border-amber-600 hover:bg-amber-50 hover:shadow-lg hover:-translate-y-1 active:scale-95"
                 >
-                  <span className={`text-xl group-hover:scale-125 transition-transform duration-300 ${feature.style}`}>
+                  <span
+                    className={`text-xl group-hover:scale-125 transition-transform duration-300 ${feature.style}`}
+                  >
                     {feature.icon}
                   </span>
                   <span className="text-sm md:text-base">{feature.title}</span>
@@ -95,13 +100,16 @@ export default function About() {
               </div>
             </div>
           </div>
-          <div data-aos="fade-left" className="relative h-96 lg:h-full min-h-96 animate-fade-in-right">
+          <div
+            data-aos="fade-left"
+            className="relative h-96 lg:h-full min-h-96 animate-fade-in-right"
+          >
             <div className="absolute inset-0 bg-gradient-to-br from-amber-200 to-orange-200 rounded-3xl opacity-20 blur-xl" />
             <div className="relative h-full rounded-3xl overflow-hidden bg-gray-200 shadow-2xl group cursor-pointer">
               <img
                 src="https://images.unsplash.com/photo-1691036562015-56ebf6648f8c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTl8fGZ1cm5pdHVyZXxlbnwwfHwwfHx8MA%3D%3D"
                 alt="Minimalist yatak xonasi"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 max-[1024px]:object-contain"
               />
               <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <div className="text-white text-center space-y-2">
@@ -110,10 +118,12 @@ export default function About() {
                 </div>
               </div>
             </div>
-            <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl p-6 shadow-lg border border-gray-100 max-w-xs transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl">
+            <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl p-4 md:p-6 shadow-lg border border-gray-100 max-w-xs transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl max-[920px]:-left-2">
               <p className="text-sm text-gray-600 mb-2">Eksklyuziv Tavsif</p>
               <p className="text-2xl font-bold text-gray-900">30%</p>
-              <p className="text-xs text-amber-600 font-semibold mt-1">Birinchi buyurtmada</p>
+              <p className="text-xs text-amber-600 font-semibold mt-1">
+                Birinchi buyurtmada
+              </p>
             </div>
           </div>
         </div>
@@ -150,5 +160,5 @@ export default function About() {
         }
       `}</style>
     </section>
-  )
+  );
 }
